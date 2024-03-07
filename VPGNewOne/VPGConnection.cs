@@ -24,7 +24,7 @@ namespace VPGNewOne
             {
                 string serverIP = txtIP.Text.ToString(); // Change this to your server's IP address
                 int port = Convert.ToInt32(txtPORT.Text.ToString()); // Change this to your server's port number
-
+                //this.Close();
                 DHS_2 dHS_2 = new DHS_2();
                 dHS_2.loadGauge(serverIP,port);
               

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DHS_2));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
@@ -66,6 +67,7 @@
             this.mtrtpViewall = new MetroFramework.Controls.MetroTabPage();
             this.mtrtpGraph = new MetroFramework.Controls.MetroTabPage();
             this.btnIpConnect = new System.Windows.Forms.Button();
+            this.timerDHS = new System.Windows.Forms.Timer(this.components);
             this.mnuVPG.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbVPG)).BeginInit();
             this.grpVPG.SuspendLayout();
@@ -149,7 +151,7 @@
             this.aggeVPG.Center = new System.Drawing.Point(100, 100);
             this.aggeVPG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aggeVPG.Location = new System.Drawing.Point(173, 11);
-            this.aggeVPG.MaxValue = 500F;
+            this.aggeVPG.MaxValue = 100F;
             this.aggeVPG.MinValue = 0F;
             this.aggeVPG.Name = "aggeVPG";
             this.aggeVPG.NeedleColor1 = System.Windows.Forms.AGaugeNeedleColor.Magenta;
@@ -178,7 +180,7 @@
             this.aggeVPG.ScaleNumbersStartScaleLine = 0;
             this.aggeVPG.ScaleNumbersStepScaleLines = 1;
             this.aggeVPG.Size = new System.Drawing.Size(209, 180);
-            this.aggeVPG.TabIndex = 3;
+            this.aggeVPG.TabIndex = 1;
             this.aggeVPG.Text = "aGauge1";
             this.aggeVPG.Value = 0F;
             // 
@@ -509,6 +511,10 @@
             this.btnIpConnect.UseVisualStyleBackColor = false;
             this.btnIpConnect.Click += new System.EventHandler(this.btnIpConnect_Click);
             // 
+            // timerDHS
+            // 
+            this.timerDHS.Tick += new System.EventHandler(this.timerDHS_Tick);
+            // 
             // DHS_2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -580,6 +586,7 @@
         private System.Windows.Forms.Label lblKg;
         private System.Windows.Forms.Button btnIpConnect;
         private System.Windows.Forms.AGauge aggeVPG;
+        private System.Windows.Forms.Timer timerDHS;
     }
 }
 
